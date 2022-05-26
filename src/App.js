@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import Nav from "./components/Nav";
+import PortfolioProvider from './utils/PortfolioContext'
+import Wrapper from './assets/wrappers/App'
+import AnimatedRoutes from "./components/AnimatedRoutes";
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PortfolioProvider>
+      <Router>
+        <Wrapper>
+          <Nav />
+          <AnimatedRoutes />
+        </Wrapper>
+      </Router> 
+    </PortfolioProvider>
   );
 }
 
