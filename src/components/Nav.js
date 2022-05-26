@@ -22,7 +22,9 @@ const Nav = () => {
   return (
     <Wrapper>
       <div className='mobile-header'>
-        <img src={logo} alt="jacob sanders" />
+        <a href="/">
+          <img src={logo} alt="jacob sanders" />
+        </a>
         <GiHamburgerMenu className='burger' onClick={handleClick}/>
       </div>
       <ul className={toggleMenuClass(showMenu)}>
