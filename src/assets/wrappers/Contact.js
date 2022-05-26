@@ -19,6 +19,10 @@ const Wrapper = styled.section`
         font-size: 0.8rem;
     }
 
+    h3 {
+        font-size: 1rem;
+    }
+
     form {
         margin: 2rem 0.5rem;
     }

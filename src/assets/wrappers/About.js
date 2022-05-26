@@ -19,6 +19,10 @@ const Wrapper = styled.section`
         flex-basis: 50%;
     }
 
+    h3 {
+        font-size: 1rem;
+    }
+
     .image { 
         display: flex;
         justify-content: center;
@@ -40,13 +44,17 @@ const Wrapper = styled.section`
         padding: 1rem;
         
         .content {
-            flex-direction: column;
+            flex-direction: column-reverse;
             justify-content: center;
         }
 
         .text {
             text-align: justify;
             padding-right: 0;
+        }
+
+        p, li {
+            font-size: 0.8rem;
         }
 
         img {

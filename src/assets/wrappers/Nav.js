@@ -28,8 +28,16 @@ const Wrapper = styled.section`
         display: block;
     }
 
-    .portfolio-menu li {
+    .link {
         font-size: 0.9rem;
+    }
+
+    .link.active {
+        text-decoration: underline;
+    }
+
+    .link.inactive {
+        text-decoration: none;
     }
 
     .mobile-header {
@@ -37,7 +45,6 @@ const Wrapper = styled.section`
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-
     }
 
     .burger {
@@ -56,6 +63,10 @@ const Wrapper = styled.section`
             display: none;
         }
 
+        .menu li {
+            margin: 0.5rem 0;
+        }
+
         .menu.active {
             display: block;
             text-align: center;
@@ -64,12 +75,13 @@ const Wrapper = styled.section`
         .portfolio-menu {
             padding-left: 0;
             margin-bottom: 1rem;
+            user-select: none;
         }
 
         .portfolio-menu li {
             font-size: 0.8rem;
             text-align: center;
-            margin: 0 auto;
+            margin: 0.75rem auto;
         }
 
         

@@ -6,7 +6,7 @@ const PortfolioNav = () => {
   let location = useLocation();
   const [ showMenu, setShowMenu ] = useState(false)
   const [ redirect, setRedirect ] = useState(false)
-  const { setActivePage } = usePortfolio();
+  const { activePage, setActivePage } = usePortfolio();
 
   const handleClick = (e) => {
       const target = e.target.textContent;
@@ -35,8 +35,15 @@ const PortfolioNav = () => {
     if (e.target.id === 'toggle') {
         setShowMenu(!showMenu)
     }
-    
   }
+
+  const activeStyle = (link) => {
+    if (link === activePage) {
+        return "link active"
+    } else {
+        return "link inactive"
+    }
+}
 
   return (
     <li id='toggle' onClick={handleMenuToggle}>
@@ -44,15 +51,15 @@ const PortfolioNav = () => {
         <ul className={toggleClass(showMenu)}>
             {redirect ? (
               <Link to='/'>
-              <li onClick={handleClick}>Nature</li>
-              <li onClick={handleClick}>Portrait</li>
-              <li onClick={handleClick}>Architecture</li>
+              <li className={activeStyle('Nature')} onClick={handleClick}>Nature</li>
+              <li className={activeStyle('Portrait')} onClick={handleClick}>Portrait</li>
+              <li className={activeStyle('Architecture')} onClick={handleClick}>Architecture</li>
               </Link> )
               : (
               <>
-              <li onClick={handleClick}>Nature</li>
-              <li onClick={handleClick}>Portrait</li>
-              <li onClick={handleClick}>Architecture</li>
+              <li className={activeStyle('Nature')} onClick={handleClick}>Nature</li>
+              <li className={activeStyle('Portrait')} onClick={handleClick}>Portrait</li>
+              <li className={activeStyle('Architecture')} onClick={handleClick}>Architecture</li>
               </>
               )
             }
