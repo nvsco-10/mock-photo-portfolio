@@ -22,10 +22,11 @@ As well as to practice implementing clean and responsive design using custom CSS
 </p>
 
 
-## API
+## Images/API
 
-- All images in the portfolio gallery are generated using the [Pexels API](https://www.pexels.com/api/documentation/).
-- The site does not use a paid subscription so there is a limit of 200 calls per hour.
+- All images in the portfolio gallery are generated using the [Pexels API](https://www.pexels.com/api/documentation/). 
+- All image credits go to the photographers. No copyright infringement intended.
+- The site does not use a paid subscription to the Pexels API so there is a limit of 200 calls per hour. In the event that images do not load, please check back in an hour or so.
 
 ## Tests
 
