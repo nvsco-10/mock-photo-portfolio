@@ -36,9 +36,8 @@ const FeaturedPhoto = ({id, setShowFeatured}) => {
       >
         <Featured>
           <span className='back-btn' onClick={() => setShowFeatured(false)}>Back</span>
-          {photo && (
+          {photo ? (
           <>
-
           <img src={photo.src.large2x} />
           <div>
               <p className='title'>{photo.alt}</p>
@@ -48,6 +47,12 @@ const FeaturedPhoto = ({id, setShowFeatured}) => {
               <span><a href={photo.url}>source</a></span>
           </div>
           </>
+          ) : (
+            <div className='warning'>
+              <p>Sorry, images aren't loading because the API limit for the hour has been reached. The dev is too broke to get a paid subscription. Sad life.</p>
+              <img src="https://static.wikia.nocookie.net/0e9418e5-bf6c-4353-8702-5b7ec0b56a52/scale-to-width/755" alt="crying man meme" />
+              <p>Check back in an hour, or <u><a href="https://github.com/nvsco-10" target="_blank" rel="noreferrer" >hire the dev so she can pay for a damn subscription.</a></u></p>
+            </div>
           )}
         </Featured>
       </motion.div>

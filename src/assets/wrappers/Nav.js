@@ -5,7 +5,12 @@ const Wrapper = styled.section`
     width: 17rem;
 
     img {
-        width: 17rem;
+        width: 15rem;
+        padding: 0.5em;
+    }
+
+    .menu {
+        padding-left: 0;
     }
 
     .menu li {
@@ -83,7 +88,10 @@ const Wrapper = styled.section`
             text-align: center;
             margin: 0.75rem auto;
         }
-
+        
+        .burger {
+            padding-right: 0.5rem;
+    }
         
 
     }
