@@ -17,8 +17,8 @@ The site was created as a canvas to implement and practice following technologie
 As well as to practice implementing clean and responsive design using custom CSS and media queries.
 
 <p align='center'>
-<img src='./src/assets/img/pix2.PNG' width='400px'><br>
-<img src='./src/assets/img/pix3.PNG' width='250px'>
+    <img src='./src/assets/img/pix2.PNG' width='600px'><br>
+    <img src='./src/assets/img/pix3.PNG' width='400px'>
 </p>
 
 
